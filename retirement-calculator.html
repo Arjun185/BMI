@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Retirement Calculator - Calculator.in</title>
+</head>
+<body>
+    <header><h1>Retirement Calculator</h1></header>
+
+    <div class="container">
+        <label for="currentAge">Current Age:</label>
+        <input type="number" id="currentAge">
+
+        <label for="retirementAge">Retirement Age:</label>
+        <input type="number" id="retirementAge">
+
+        <button onclick="calculateRetirement()">Calculate</button>
+        <div id="retirementResult" class="result"></div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <footer>
+        <a href="about.html">About Us</a> | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
