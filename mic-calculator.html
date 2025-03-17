@@ -3,47 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Interest Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Monthly Interest Calculator - Calculator.in</title>
 </head>
 <body>
-    <h2>Monthly Interest Calculator</h2>
-    <div class="input-group">
+    <header>
+        <h1>Monthly Interest Calculator</h1>
+    </header>
+
+    <div class="container">
         <label for="principal">Principal Amount (₹):</label>
-        <input type="number" id="principal" placeholder="Enter Principal Amount">
-    </div>
-    <div class="input-group">
+        <input type="number" id="principal">
+        
         <label for="rate">Monthly Interest Rate (%):</label>
-        <input type="number" id="rate" placeholder="Enter Interest Rate">
-    </div>
-    <div class="input-group">
+        <input type="number" id="rate">
+        
         <label for="fromDate">From Date:</label>
         <input type="date" id="fromDate">
-    </div>
-    <div class="input-group">
+        
         <label for="toDate">To Date:</label>
         <input type="date" id="toDate">
+        
+        <button onclick="calculateMonthlyInterest()">Calculate</button>
+        <div id="result" class="result"></div>
     </div>
-    <button class="calc-btn" onclick="calculateMonthlyInterest()">Calculate</button>
-    <div class="result" id="result"></div>
-    <script src="scripts.js"></script>
-    // Monthly Interest Calculator
-function calculateMonthlyInterest() {
-    const principal = parseFloat(document.getElementById("principal").value);
-    const rate = parseFloat(document.getElementById("rate").value);
-    const fromDate = new Date(document.getElementById("fromDate").value);
-    const toDate = new Date(document.getElementById("toDate").value);
 
-    if (isNaN(principal) || isNaN(rate) || isNaN(fromDate.getTime()) || isNaN(toDate.getTime())) {
-        alert("Please fill all fields correctly.");
-        return;
-    }
+    <a href="index.html" class="back-link">← Back to Home</a>
 
-    const timeDiff = Math.abs(toDate - fromDate);
-    const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-    const monthlyInterest = (principal * rate * days) / (30 * 100);
-    
-    document.getElementById("result").innerText = `Monthly Interest: ₹${monthlyInterest.toFixed(2)}`;
-}
+    <footer>
+        <a href="about.html">About Us</a> | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
