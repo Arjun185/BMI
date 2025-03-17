@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GST Calculator - Calculator.in</title>
+</head>
+<body>
+    <header><h1>GST Calculator</h1></header>
+
+    <div class="container">
+        <label for="amount">Amount (₹):</label>
+        <input type="number" id="amount">
+
+        <label for="gstRate">GST Rate (%):</label>
+        <input type="number" id="gstRate">
+
+        <button onclick="calculateGST()">Calculate</button>
+        <div id="gstResult" class="result"></div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <footer>
+        <a href="about.html">About Us</a> | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
