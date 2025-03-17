@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SIP Calculator - Calculator.in</title>
+</head>
+<body>
+    <header><h1>SIP Calculator</h1></header>
+
+    <div class="container">
+        <label for="sipAmount">Monthly Investment (₹):</label>
+        <input type="number" id="sipAmount">
+
+        <label for="sipRate">Annual Interest Rate (%):</label>
+        <input type="number" id="sipRate">
+
+        <label for="sipPeriod">Investment Period (Years):</label>
+        <input type="number" id="sipPeriod">
+
+        <button onclick="calculateSIP()">Calculate</button>
+        <div id="sipResult" class="result"></div>
+    </div>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <footer>
+        <a href="about.html">About Us</a> | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
